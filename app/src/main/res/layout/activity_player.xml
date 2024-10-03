@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background"
+    android:padding="16dp"
+    android:gravity="center_horizontal"
+    tools:context=".PlayerActivity">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Escuchando"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:gravity="center_horizontal"
+        android:layout_marginBottom="16dp"/>
+    <ImageView
+        android:layout_width="340dp"
+        android:layout_height="340dp"
+        android:id="@+id/song_cover_image_view"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:text="Canción"
+        android:textColor="@color/white"
+        android:layout_marginTop="16dp"
+        android:textStyle="bold"
+        android:id="@+id/song_title_text_view"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="Artista"
+        android:textColor="@color/Text"
+        android:layout_marginTop="10dp"
+        android:id="@+id/song_subtitle_text_view"/>
+
+    <androidx.media3.ui.PlayerControlView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="8dp"
+        app:hide_on_touch="true"
+        app:show_timeout="0"
+
+        android:id="@+id/player_view"/>
+
+</LinearLayout>
