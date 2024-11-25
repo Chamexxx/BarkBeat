@@ -1,6 +1,155 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center"
+    tools:context=".SignUpActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/barkbeat" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:gravity="center"
+            android:paddingTop="8dp"
+            android:text="BarkBeat"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <!-- Campo de correo electrónico -->
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Correo Electrónico"
+            android:textColorHint="@color/black"
+            android:padding="16dp"
+            android:inputType="textEmailAddress"
+            android:background="@drawable/rounded_corner"
+            android:id="@+id/email_edittext" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+
+        <!-- Campo de contraseña con icono dentro del borde -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <!-- EditText de contraseña -->
+            <EditText
+                android:id="@+id/password_edittext"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Contraseña"
+                android:textColorHint="@color/black"
+                android:padding="16dp"
+                android:inputType="textPassword"
+                android:background="@drawable/rounded_corner" />
+
+            <!-- Icono de mostrar/ocultar contraseña -->
+            <ImageButton
+                android:id="@+id/btn_toggle_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|end"
+                android:src="@drawable/icon_eye"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Mostrar/Ocultar contraseña"
+                android:padding="16dp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+
+        <!-- Campo de confirmación de contraseña con icono dentro del borde -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <!-- EditText de confirmación de contraseña -->
+            <EditText
+                android:id="@+id/confirm_password_edittext"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Confirmar contraseña"
+                android:textColorHint="@color/black"
+                android:padding="16dp"
+                android:inputType="textPassword"
+                android:background="@drawable/rounded_corner" />
+
+            <!-- Icono de mostrar/ocultar confirmación de contraseña -->
+            <ImageButton
+                android:id="@+id/btn_toggle_confirm_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|end"
+                android:src="@drawable/icon_eye"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Mostrar/Ocultar confirmación de contraseña"
+                android:padding="16dp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+
+        <!-- Botón para crear cuenta -->
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:text="Crear cuenta"
+            android:id="@+id/create_account_btn" />
+
+        <!-- ProgressBar para mostrar el estado de progreso -->
+        <ProgressBar
+            android:layout_width="32dp"
+            android:layout_height="60dp"
+            android:id="@+id/progress_bar"
+            android:visibility="gone"
+            android:indeterminateTint="@color/white" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+
+        <!-- Enlace al login si ya tiene cuenta -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ya tengo una cuenta"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:id="@+id/goto_login_btn" />
+    </LinearLayout>
+</LinearLayout>

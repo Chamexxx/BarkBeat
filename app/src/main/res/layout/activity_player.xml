@@ -43,6 +43,19 @@
         android:layout_marginTop="10dp"
         android:id="@+id/song_subtitle_text_view"/>
 
+    <Button
+        android:id="@+id/buttonAgregarAPlaylist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Agregar a Playlist"
+        android:layout_gravity="end|top"
+        android:padding="8dp"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/black"
+        android:layout_margin="8dp"/>
+
+
+
     <androidx.media3.ui.PlayerControlView
         android:layout_width="match_parent"
         android:layout_height="200dp"
@@ -51,5 +64,7 @@
         app:show_timeout="0"
 
         android:id="@+id/player_view"/>
+
+
 
 </LinearLayout>

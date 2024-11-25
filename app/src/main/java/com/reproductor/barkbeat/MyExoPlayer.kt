@@ -4,6 +4,8 @@ import android.content.Context
 import androidx.media3.common.MediaItem
 import androidx.media3.exoplayer.ExoPlayer
 import com.reproductor.barkbeat.models.SongModel
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
 
 
 object MyExoplayer {
@@ -42,6 +44,7 @@ object MyExoplayer {
 
 
     }
+
 
 
 

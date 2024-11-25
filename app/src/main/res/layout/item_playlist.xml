@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@drawable/item_playlist_background"
+    android:layout_margin="8dp"
+    android:padding="8dp">  <!-- Margen interno para separar los elementos del borde del fondo -->
+
+    <!-- Imagen de la playlist a la izquierda -->
+    <ImageView
+        android:id="@+id/playlist_image"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/playlist" />
+
+
+    <TextView
+        android:id="@+id/playlist_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nombre de la playlist"
+        android:textSize="18sp"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:gravity="center_horizontal"
+        android:layout_marginStart="16dp" />  <!-- Margen a la izquierda del nombre de la playlist -->
+
+
+</LinearLayout>
